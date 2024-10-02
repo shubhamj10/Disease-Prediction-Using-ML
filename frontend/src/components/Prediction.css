@@ -1,0 +1,71 @@
+.container {
+  width: calc(90% - 40px); 
+  max-width: 900px; 
+  min-width: 300px;
+  min-height: 86vh;
+  margin: 2px auto; 
+  padding: 20px;
+  /* background-color: #B0EBB4; */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+}
+   
+   .error {
+     color: red;
+     margin-bottom: 15px;
+   }
+   
+   .symptom-list {
+     list-style-type: none;
+     padding: 0;
+   }
+   
+   .textarea-container {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    border-radius: 25px;
+    transform: translateX(-50%);
+    width: 90%; 
+    max-width: 900px; 
+    padding: 10px; 
+    background-color: #f9f9f9; 
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-end; 
+    z-index: 9999; 
+}
+   .textarea {
+     width: 100%;
+     border-radius: 50px;
+     height: 95px;
+     border: 1px solid #ccc;
+     resize: none;
+     padding: 10px 40px 10px 20px;
+     font-size: 1.2rem;
+   }
+   
+   .submit-button {
+     padding-left: 50px;
+     position: absolute;
+     right: 10px;
+     bottom: 10px;
+     background: none;
+     border: none;
+     cursor: pointer;
+     font-size: 20px;
+     color: #007bff;
+     border: 1px solid black;
+     outline: none;
+   }
+   
+   .submit-button:hover {
+     color: #0056b3;
+   }
+   .output-message {
+    font-size: 1.5em; 
+    color: #333; 
+    margin-top: 10px; 
+  }

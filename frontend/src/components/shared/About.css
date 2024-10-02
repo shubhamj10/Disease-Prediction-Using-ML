@@ -1,0 +1,44 @@
+.homepage {
+     text-align: center;
+     margin-top: 0;
+     padding: 0;
+ }
+ 
+
+ .about-header {
+     margin-bottom: 20px;
+     font-weight: bold;
+ }
+ #about {
+     padding-top: 5%;
+
+ }
+ 
+h2{
+     margin-top: 20px;
+ }
+ .sections-container {
+     display: flex;
+     margin-top: 50px;
+     justify-content: center;
+ }
+ 
+ .section {
+     margin: 0 15px;
+     padding: 10px;
+     /* border: 1px solid #ccc; */
+     border-radius: 5px;
+     width: 400px;
+     margin-bottom: 20px;
+ }
+ 
+ .section h2 {
+     font-weight: bold;
+     
+ }
+ 
+ .section p {
+     color: #6b7280;
+     letter-spacing: normal;
+ }
+ 

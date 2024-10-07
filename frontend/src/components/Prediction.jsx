@@ -5,7 +5,7 @@ import sendIcon from './img/send-icon.png';
 
 function Prediction() {
   const [query, setQuery] = useState('');
-  const [outputMessage, setOutputMessage] = useState('');
+  const [messages, setMessages] = useState([]); // State to hold chat messages
   const [error, setError] = useState(null);
 
   const handleQueryChange = (event) => {
@@ -13,27 +13,47 @@ function Prediction() {
   };
 
   const handleSubmit = async () => {
+    if (!query) return; // Prevent empty messages
+
     setError(null); // Reset error state
+    // Add user message to chat
+    setMessages((prevMessages) => [...prevMessages, { text: query, sender: 'user' }]);
+    
     try {
       const response = await axios.post('http://192.168.29.194:3000/api/symptoms', { query });
       console.log('API Response:', response.data);
 
       if (response.data && Array.isArray(response.data.symptoms)) {
-        const symptoms = response.data.symptoms.join(', '); // Join symptoms into a single string
-        setOutputMessage(`Symptoms extracted from your description are: ${symptoms}.`);
+        const symptoms = response.data.symptoms.join(', ');
+        setMessages((prevMessages) => [
+          ...prevMessages,
+          { text: `Symptoms extracted from your description are: ${symptoms}.`, sender: 'bot' }
+        ]);
       } else {
         setError('Unexpected response structure');
       }
     } catch (error) {
       console.error('Error fetching data:', error);
       setError(error.response?.data?.error || 'Something went wrong. Please try again.');
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        { text: 'Something went wrong. Please try again.', sender: 'bot' }
+      ]);
     }
+
+    setQuery(''); // Clear the input field after submitting
   };
 
   return (
     <div className="container">
       {error && <p className="error">{error}</p>}
-      {outputMessage && <p className="output-message">{outputMessage}</p>} {/* Display output message */}
+      <div className="chat-history">
+        {messages.map((message, index) => (
+          <p key={index} className={message.sender === 'user' ? 'user-message' : 'bot-message'}>
+            {message.text}
+          </p>
+        ))}
+      </div>
       <div className="textarea-container">
         <textarea
           className="textarea"

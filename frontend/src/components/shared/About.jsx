@@ -3,7 +3,7 @@ import './About.css'
 
 function About() {
      return (
-          <div className=' h-screen homepage h-screen bg-gradient-to-b from-[#D6EFD8] to-[#f0f0f0]'>
+          <div id="about" className='h-[32rem] homepage bg-gradient-to-b from-[#D6EFD8] to-[#f0f0f0]'>
 
                <h2 className='about-header' id='about'>About Us</h2>
 

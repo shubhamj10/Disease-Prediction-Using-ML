@@ -6,18 +6,9 @@ import Prediction from '../Prediction';
 
 function Landing() {
   return (
-//      <div className="h-screen bg-gradient-to-b from-[#f0f0f0] to-[#D6EFD8] relative">
-//   <div className='absolute top-[25%] left-1/2 transform -translate-x-1/2 text-center'>
-//     <h1 className='text-3xl font-bold'>Predict Your Health</h1>
-//     <p className='text-base font-bold text-gray-500 mt-5'>
-//       Describe your health and get instant predictions using <br /> 
-//       <span className='text-gray-500'>advanced AI</span>
-//     </p>
-//   </div>
-// </div>
 
 
-<div className=" bg-gradient-to-b from-[#f0f0f0] to-[#D6EFD8] flex flex-col  items-center">
+<div id="home" className="mb-0 bg-gradient-to-b from-[#f0f0f0] to-[#D6EFD8] flex flex-col  items-center">
   <div className='mt-60 flex flex-col items-center text-center'>
     <h1 className='text-7xl font-extrabold font-inter-tight'>Predict Your Health</h1>
     <p className='tracking-wide text-2xl font-bold text-gray-500 mt-5'>

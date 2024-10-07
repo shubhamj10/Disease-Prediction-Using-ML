@@ -16,7 +16,7 @@ load_dotenv()
 GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
 llm = ChatGoogleGenerativeAI(model='gemini-pro', google_api_key=GOOGLE_API_KEY)
 
-# Comprehensive symptom list
+
 symptom_list = [
     "fever", "cough", "fatigue", "shortness of breath", "headache",
     "muscle aches", "sore throat", "loss of taste", "nausea", "vomiting",
@@ -45,21 +45,20 @@ def get_symptoms():
     prompt = prompt_template.format(query=query, symptom_list=', '.join(symptom_list))
     result = llm.invoke(prompt)
 
-    # Log the raw output for debugging
+
     print("Raw LLM Result:", result.content)
 
     try:
         raw_json = result.content.strip()
         print("Raw Output:", raw_json)
 
-        # Fix common issues with quotes
-        raw_json = raw_json.replace("'", '"')  # Replace single quotes with double quotes
-        raw_json = re.sub(r'(\w+):', r'"\1":', raw_json)  # Add double quotes around keys if missing
+        raw_json = raw_json.replace("'", '"') 
+        raw_json = re.sub(r'(\w+):', r'"\1":', raw_json)  
 
-        # Print the modified output for further debugging
+        
         print("Modified LLM Result:", raw_json)
 
-        # Load the JSON
+      
         symptoms = json.loads(raw_json)
         return jsonify({"symptoms": symptoms.get("symptoms", [])})
 

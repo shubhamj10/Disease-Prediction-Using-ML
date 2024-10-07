@@ -13,9 +13,15 @@ const Navbar = () => {
 
       <div>
         <ul className='text-custom flex font-medium item-center gap-10' >
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact</li>
+        <li>
+              <Link to="#home">Home</Link>
+            </li>
+            <li>
+              <Link to="#about">About Us</Link>
+            </li>
+            <li>
+              <Link to="#contact">Contact</Link>
+            </li>
         </ul>
       </div>
 

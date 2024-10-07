@@ -1,8 +1,8 @@
 import React from 'react'
 import Navbar from './shared/Navbar'
 import Landing from './shared/Landing'
-import Contact from './shared/Contact'
 import About from './shared/About'
+import Contact from './shared/Contact'
 
 function Home() {
   return (

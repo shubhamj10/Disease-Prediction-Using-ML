@@ -18,6 +18,8 @@ This is a React.js project
 - **AI Services**:
   - Conversation: [OpenAI](https://www.openai.com).
  
+- **Version Control**: Managed with Git and GitHub.
+ 
 
 ## Installation
 
@@ -27,3 +29,29 @@ To set up the project locally, follow these steps:
    ```bash
    git clone https://github.com/shubhamj10/disease-prediction.git
    ```
+
+2.Install packages
+```bash
+cd frontend
+npm i
+```
+
+3.Install python Dependencies 
+```bash
+cd backend
+pip install -r requirements.txt
+```
+
+4.Start Frontend
+```bash
+npm run dev
+```
+
+5.Run python file on new terminal
+```bash
+cd api
+python3 api.py
+```
+
+## Author :
+  - [@ Shubham Jankar](https://github.com/shubhamj10)

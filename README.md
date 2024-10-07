@@ -53,5 +53,14 @@ cd api
 python3 api.py
 ```
 
+## Project Snapshot
+Landing Page
+
+![Landing Page](https://github.com/shubhamj10/Disease-Prediction-Using-ML/blob/main/landing.jpeg?raw=true)
+
+Prediction Page
+
+![Prediction Page](https://github.com/shubhamj10/Disease-Prediction-Using-ML/blob/main/predict.jpeg?raw=true)
+
 ## Author :
   - [@ Shubham Jankar](https://github.com/shubhamj10)
